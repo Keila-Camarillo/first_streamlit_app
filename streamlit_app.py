@@ -1,4 +1,4 @@
-ctimport streamlit
+import streamlit
 import pandas as pd
 
 
