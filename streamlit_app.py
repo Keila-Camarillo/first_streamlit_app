@@ -51,8 +51,8 @@ except URLError as e:
 # # coverts json to a dataframe
 # streamlit.dataframe(fruityvice_normalized)
 def get_fruityvice_data(this_fruit_choice):
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-    fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+  fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
   return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
