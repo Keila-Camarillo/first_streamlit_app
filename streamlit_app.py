@@ -46,7 +46,7 @@ except URLError as e:
 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
-    my_cur.execute("insert into fruit_load_list values ('"+ new_fruit + "')")
+    my_cur.execute("insert into fruit_load_list values ('"+ get_fruityvice_data(new_fruit) + "')")
     return "Thanks for adding" + new_fruit
 streamlit.stop()
 # # new section to display fruityvice api response
