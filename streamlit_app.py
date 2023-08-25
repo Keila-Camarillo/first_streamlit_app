@@ -54,7 +54,9 @@ def insert_row_snowflake(new_fruit):
 def get_fruit_load_list():
   with my_cnv.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
-    return my_cur.fetchall()
+    my_data_rows = my_cur.fetchall()
+    return streamlit.dataframe(my_data_rows)
+
   
 
 if streamlit.button("Get Fruit List"):
